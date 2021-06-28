@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrousel</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        font-size: 62.5%;
+    }
+
+    .carousel {
+        width: 100%;
+        overflow: scroll;
+        padding: 3rem;
+        position: relative;
+    }
+
+    .carousel__container {
+        white-space: nowrap;
+        margin: 7rem 0;
+        padding-bottom: 1rem;
+    }
+
+    .carousel-item {
+        background: #252525;
+        width: 20rem;
+        height: 25rem;
+        border-radius: 2rem;
+        overflow: hidden;
+        margin-right: 1rem;
+        display: inline-block;
+        cursor: pointer;
+        transition: 450ms;
+        transform-origin: center;
+        position: relative;        
+    }
+
+    .carousel-item:hover ~ .carousel-item {
+        transform: translate3d(10rem, 0, 0);
+    }
+
+    .carousel__container:hover .carousel-item {
+        opacity: 0.3;
+    }
+
+    .carousel__container:hover .carousel-item:hover {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+
+    .carousel-item__img {
+        height: 20rem;
+        width: 25rem;
+        object-fit: cover;
+        
+    }
+
+    .carousel-item__details {  
+        background: linear-gradient(rgba(0, 0, 0, .9), rgba(0, 0, 0, 0));      
+        font-size: 1rem;
+        opacity: 1;
+        transition: 450ms opacity;
+        padding: 0.2rem 1.5rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;     
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .carousel-item__details--icons {
+        display: block;
+    }
+
+    .carousel-item__details--icons img{
+        width: 2.5rem;
+    }
+
+    .carousel-item__details p {
+        color: white;
+        font-size: 1.2rem;
+
+    }
+    .carousel-item__details--title    {
+        font-weight: bold;
+        letter-spacing: .5px;
+    }
+
+
+</style>
+<body>
+    <section class="carousel">
+        <div class="carousel__container">
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="https://source.unsplash.com/random?people" alt="People">
+                <div class="carousel-item__details">
+                    <div class="carousel-item__details--icons">
+                        <img src="./icon/icons8-play-64.png" alt="Play">
+                        <img src="./icon/icons8-plus-64.png" alt="Plus">
+                    </div>
+                    <p class="carousel-item__details--title">Personas</p>
+                    <p class="carousel-item__details--subtitle">2021, 2 minutos</p>
+                </div>               
+            </div>
+            <div class="carousel-item"> 
+                <img class="carousel-item__img" src="https://source.unsplash.com/random?work" alt="Work">
+                <div class="carousel-item__details">
+                    <div class="carousel-item__details--icons">
+                        <img src="./icon/icons8-play-64.png" alt="Play">
+                        <img src="./icon/icons8-plus-64.png" alt="Plus">
+                    </div>
+                    <p class="carousel-item__details--title">Trabajos</p>
+                    <p class="carousel-item__details--subtitle">2020, 5 minutos</p>               
+                </div>
+            </div>
+            <div class="carousel-item"> 
+                <img class="carousel-item__img" src="https://source.unsplash.com/random?cars" alt="Cars">
+                <div class="carousel-item__details">
+                    <div class="carousel-item__details--icons">
+                        <img src="./icon/icons8-play-64.png" alt="Play">
+                        <img src="./icon/icons8-plus-64.png" alt="Plus">
+                    </div>
+                    <p class="carousel-item__details--title">Automóviles</p>
+                    <p class="carousel-item__details--subtitle">2018, 1:30 minutos</p>               
+                </div>
+            </div>
+            <div class="carousel-item"> 
+                <img class="carousel-item__img" src="https://source.unsplash.com/random?nature" alt="nature">
+                <div class="carousel-item__details">
+                    <div class="carousel-item__details--icons">
+                        <img src="./icon/icons8-play-64.png" alt="Play">
+                        <img src="./icon/icons8-plus-64.png" alt="Plus">
+                    </div>
+                    <p class="carousel-item__details--title">Naturaleza</p>
+                    <p class="carousel-item__details--subtitle">2019, 5 minutos</p>               
+                </div>
+            </div>
+            <div class="carousel-item"> 
+                <img class="carousel-item__img" src="https://source.unsplash.com/random?animals" alt="animals">
+                <div class="carousel-item__details">
+                    <div class="carousel-item__details--icons">
+                        <img src="./icon/icons8-play-64.png" alt="Play">
+                        <img src="./icon/icons8-plus-64.png" alt="Plus">
+                    </div>
+                    <p class="carousel-item__details--title">Animales</p>
+                    <p class="carousel-item__details--subtitle">2010, 4:30 minutos</p>               
+                </div>
+            </div>
+            <div class="carousel-item"> 
+                <img class="carousel-item__img" src="https://source.unsplash.com/random?houses" alt="houses">
+                <div class="carousel-item__details">
+                    <div class="carousel-item__details--icons">
+                        <img src="./icon/icons8-play-64.png" alt="Play">
+                        <img src="./icon/icons8-plus-64.png" alt="Plus">
+                    </div>
+                    <p class="carousel-item__details--title">Casas</p>
+                    <p class="carousel-item__details--subtitle">2010, 4:30 minutos</p>               
+                </div>
+            </div>
+            <div class="carousel-item"> 
+                <img class="carousel-item__img" src="https://source.unsplash.com/random?clothes" alt="clothes">
+                <div class="carousel-item__details">
+                    <div class="carousel-item__details--icons">
+                        <img src="./icon/icons8-play-64.png" alt="Play">
+                        <img src="./icon/icons8-plus-64.png" alt="Plus">
+                    </div>
+                    <p class="carousel-item__details--title">Ropa</p>
+                    <p class="carousel-item__details--subtitle">2010, 4:30 minutos</p>               
+                </div>
+            </div>
+            <div class="carousel-item"> 
+                <img class="carousel-item__img" src="https://source.unsplash.com/random?food" alt="food">
+                <div class="carousel-item__details">
+                    <div class="carousel-item__details--icons">
+                        <img src="./icon/icons8-play-64.png" alt="Play">
+                        <img src="./icon/icons8-plus-64.png" alt="Plus">
+                    </div>
+                    <p class="carousel-item__details--title">Comida</p>
+                    <p class="carousel-item__details--subtitle">2010, 4:30 minutos</p>               
+                </div>
+            </div>
+    </section>
+</body>
+</html>
